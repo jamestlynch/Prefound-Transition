@@ -1,0 +1,207 @@
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	box-sizing: border-box; // Apply a natural box layout model to all elements, but allowing components to change.
+	overflow-x: hidden; // Prevent horizontal scrolling
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+.group:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+}
+
+* html .group { // IE6
+	zoom: 1;
+}
+
+*:first-child+html .group { // IE7
+	zoom: 1;
+}
+
+
+@font-face {
+    font-family: 'BrandonGrotesque4';
+    src: url("Brandon_reg.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.wrapper {
+	margin: 42px auto;
+
+	font-size: 16px;
+	text-align: center;
+}
+
+.logo {
+	margin: 0 auto 84px;
+}
+
+.logo h1 {
+	margin: 0 auto;
+
+	font-family: "Cousine", monospace;
+	font-size: 1.125em;
+	font-weight: 400;
+}
+
+.slogan h1 {
+	margin: 0 auto 10.5px;
+
+	font-family: "BrandonGrotesque4", Arial, sans-serif;
+	font-size: 3.5em;
+}
+
+.slogan h2, .email-wrapper h1 {
+	margin: 0 auto;
+
+	font-family: "EB Garamond", Times, serif;
+	font-size: 1.75em;
+}
+
+.countdown {
+	width: 50%;
+	margin: 84px auto;
+	text-align: center;
+}
+
+.countdown-unit {
+	width: 23.5%;
+	float: left;
+	display: inline;
+}
+
+.countdown-unit-seperator {
+	width: 2%;
+
+	display: inline-block;
+
+	float: left;
+
+	font-size: 4em;
+}
+
+.countdown-unit h1 {
+	width: 125px;
+	heigth: 125px;
+	margin: 0 auto;
+	border: 2px solid #EFEFEF;
+	border-radius: 5px;
+
+	display: inline-block;
+
+	font-family: "BrandonGrotesque4", Arial, sans-serif;
+	font-size: 4.5em;
+	font-weight: 400;
+}
+
+.countdown-label {
+	font-family: "BrandonGrotesque4", Arial, sans-serif;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+.email-wrapper {
+	width: 40%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.email-wrapper h1 {
+	margin: 0 auto 21px;
+
+	font-family: "EB Garamond", Times, serif;
+	font-size: 1.75em;
+	font-weight: 400;
+}
+
+input:focus {
+	border: 2px solid #2C2FFA;
+	outline: none;
+}
+
+.email {
+	width: 68%;
+	padding: 15px;
+	border: 2px solid #000000;
+	margin: 0 5% 0 0;
+
+	float: left;
+
+	font-family: "BrandonGrotesque4", Arial, sans-serif;
+	font-size: 1em;
+
+	transition: all 0.15s ease-in;
+}
+
+.email:hover {
+	border-color: #2C2FFA;
+
+	transition: all 0.15s ease-in;
+}
+
+#mc_embed_signup input.mce_inline_error {
+    border-color: #E34F33 !important;
+}
+
+#mc_embed_signup div.mce_inline_error {
+	width: 68%;
+
+	position: absolute;
+	top: 109px;
+
+	background: #E34F33 !important;
+
+	font-family: "BrandonGrotesque4", Arial, sans-serif;
+	font-size: 1em !important;
+}
+
+.button {
+	width: 22%;
+	padding: 12px;
+	border: 2px solid #000000;
+
+	float: left;
+
+	font-family: "BrandonGrotesque4", Arial, sans-serif;
+	font-size: 1em;
+	text-transform: uppercase;
+
+	background: #FFFFFF;
+
+	-webkit-box-shadow: 5px 5px 0 0 #000000;
+	-moz-box-shadow: 5px 5px 0 0 #000000;
+	box-shadow: 5px 5px 0 0 #000000;
+
+	transition: all 0.15s ease-in;
+}
+
+.button:hover {
+	cursor: pointer;
+	transition: all 0.15s ease-in;
+	-webkit-box-shadow: 3px 3px 0 0 #000000;
+	-moz-box-shadow: 3px 3px 0 0 #000000;
+	box-shadow: 3px 3px 0 0 #000000;
+}
+
+.button.hover-red:hover {
+	background-color: #E34F33;
+	color: #E34F33;
+}
+
+.button.hover-blue:hover {
+	background-color: #2C2FFA;
+	color: #2C2FFA;
+}
+
+.button.hover-yellow:hover {
+	background-color: #FAEF84;
+	color: #FAEF84;
+}
