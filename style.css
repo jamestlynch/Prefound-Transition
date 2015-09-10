@@ -165,6 +165,12 @@ input:focus {
 	background: #E34F33 !important;
 }
 
+#mce-error-response a {
+	display: block;
+
+	color: #FFFFFF !important;
+}
+
 #mce-success-response {
 	background: #2C2FFA !important;
 }
@@ -321,7 +327,7 @@ input:focus {
 		width: 432px;
 	}
 
-	.email, #mc_embed_signup div.mce_inline_error {
+	.email, #mc_embed_signup div.mce_inline_error, #mce-error-response, #mce-success-response {
 		width: 250px;
 	}
 }
@@ -339,7 +345,7 @@ input:focus {
 		width: 382px;
 	}
 
-	.email, #mc_embed_signup div.mce_inline_error {
+	.email, #mc_embed_signup div.mce_inline_error, #mce-error-response, #mce-success-response {
 		width: 200px;
 	}
 }
@@ -357,7 +363,7 @@ input:focus {
 		width: 366px;
 	}
 
-	.email, #mc_embed_signup div.mce_inline_error {
+	.email, #mc_embed_signup div.mce_inline_error, #mce-error-response, #mce-success-response {
 		width: 200px;
 		margin: 0 16px 0 0;
 	}
