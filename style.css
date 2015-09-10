@@ -43,7 +43,7 @@ body {
 }
 
 .wrapper {
-	width: 90%;
+	width: 95%;
 
 	margin: 42px auto;
 
@@ -68,7 +68,7 @@ body {
 	margin: 0 auto 10.5px;
 
 	font-family: "BrandonGrotesque4", Arial, sans-serif;
-	font-size: 3.25em;
+	font-size: 3.5em;
 	font-weight: normal;
 }
 
@@ -76,7 +76,7 @@ body {
 	margin: 0 auto;
 
 	font-family: "EB Garamond", Times, serif;
-	font-size: 1.75em;
+	font-size: 1.5em;
 	font-weight: normal;
 }
 
@@ -131,10 +131,6 @@ body {
 
 .email-wrapper h1 {
 	margin: 0 auto 21px;
-
-	font-family: "EB Garamond", Times, serif;
-	font-size: 1.75em;
-	font-weight: 400;
 }
 
 input:focus {
