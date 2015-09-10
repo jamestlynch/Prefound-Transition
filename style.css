@@ -33,7 +33,13 @@ html {
     font-style: normal;
 }
 
+body {
+	margin: 0;
+}
+
 .wrapper {
+	width: 90%;
+
 	margin: 42px auto;
 
 	font-size: 16px;
@@ -47,16 +53,18 @@ html {
 .logo h1 {
 	margin: 0 auto;
 
-	font-family: "Cousine", monospace;
-	font-size: 1.125em;
+	font-family: "BrandonGrotesque4", Arial, sans-serif;
+	font-size: 1em;
 	font-weight: 400;
+	text-transform: uppercase;
 }
 
 .slogan h1 {
 	margin: 0 auto 10.5px;
 
 	font-family: "BrandonGrotesque4", Arial, sans-serif;
-	font-size: 3.5em;
+	font-size: 3.25em;
+	font-weight: normal;
 }
 
 .slogan h2, .email-wrapper h1 {
@@ -64,10 +72,11 @@ html {
 
 	font-family: "EB Garamond", Times, serif;
 	font-size: 1.75em;
+	font-weight: normal;
 }
 
 .countdown {
-	width: 50%;
+	width: 60%;
 	margin: 84px auto;
 	text-align: center;
 }
@@ -80,25 +89,26 @@ html {
 
 .countdown-unit-seperator {
 	width: 2%;
+	padding: 12px 0;
 
 	display: inline-block;
 
 	float: left;
 
-	font-size: 4em;
+	font-size: 3.25em;
 }
 
 .countdown-unit h1 {
-	width: 125px;
-	heigth: 125px;
+	width: 115px;
 	margin: 0 auto;
+
 	border: 2px solid #EFEFEF;
 	border-radius: 5px;
 
 	display: inline-block;
 
 	font-family: "BrandonGrotesque4", Arial, sans-serif;
-	font-size: 4.5em;
+	font-size: 4em;
 	font-weight: 400;
 }
 
@@ -109,7 +119,7 @@ html {
 }
 
 .email-wrapper {
-	width: 40%;
+	width: 482px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -128,10 +138,10 @@ input:focus {
 }
 
 .email {
-	width: 68%;
+	width: 300px;
 	padding: 15px;
 	border: 2px solid #000000;
-	margin: 0 5% 0 0;
+	margin: 0 32px 0 0;
 
 	float: left;
 
@@ -151,20 +161,28 @@ input:focus {
     border-color: #E34F33 !important;
 }
 
-#mc_embed_signup div.mce_inline_error {
-	width: 68%;
+#mc_embed_signup div.mce_inline_error, #mce-error-response {
+	background: #E34F33 !important;
+}
+
+#mce-success-response {
+	padding: 16px;
+	background: #2C2FFA !important;
+	color: #FFFFFF;
+}
+
+#mc_embed_signup div.mce_inline_error, #mce-error-response, #mce-success-response {
+	width: 300px;
 
 	position: absolute;
 	top: 109px;
-
-	background: #E34F33 !important;
 
 	font-family: "BrandonGrotesque4", Arial, sans-serif;
 	font-size: 1em !important;
 }
 
 .button {
-	width: 22%;
+	width: 150px;
 	padding: 12px;
 	border: 2px solid #000000;
 
@@ -204,4 +222,143 @@ input:focus {
 .button.hover-yellow:hover {
 	background-color: #FAEF84;
 	color: #FAEF84;
+}
+
+@media (max-width: 980px) {
+	.slogan h1 {
+		font-size: 4.25em;
+		line-height: 1.25em;
+	}
+
+	.slogan h1 .line-1 {
+		display: block;
+	}
+
+	.slogan h2, .email-wrapper h1 {
+		font-size: 1.5em;
+	}
+
+	.slogan h2 .line-1 {
+		display: block;
+	}
+
+	.countdown {
+		width: 80%;
+		margin: 63px auto;
+	}
+
+	.countdown-unit h1 {
+		font-size: 3.75em;
+	}
+}
+
+@media (max-width: 725px) {
+	.logo {
+		margin: 0 0 63px 0;
+	}
+
+	.slogan h1 {
+		font-size: 3.75em;
+	}
+
+	.countdown {
+		width: 80%;
+		margin: 63px auto;
+	}
+
+	.countdown-unit h1 {
+		width: 100px;
+
+		font-size: 3.25em;
+	}
+
+	.countdown-unit-seperator {
+		padding: 10px 0;
+
+		font-size: 3em;
+	}
+}
+
+@media (max-width: 640px) {
+	.slogan h1 {
+		font-size: 3.25em;
+	}
+
+	.countdown {
+		width: 100%;
+	}
+
+	.countdown-unit h1 {
+		font-size: 3.5em;
+	}
+
+	.countdown-unit-seperator {
+		padding: 10px 0;
+
+		font-size: 2.75em;
+	}
+
+	.countdown-label {
+		display: none;
+	}
+}
+
+@media (max-width: 550px) {
+	.slogan h1 {
+		font-size: 3em;
+	}
+
+	.slogan h2, .email-wrapper h1 {
+		font-size: 1.5em;
+	}
+
+	.countdown-unit h1 {
+		width: 85px;
+		font-size: 3em;
+	}
+
+	.email-wrapper {
+		width: 432px;
+	}
+
+	.email, #mc_embed_signup div.mce_inline_error {
+		width: 250px;
+	}
+}
+
+@media (max-width: 510px) {
+	.slogan h1 {
+		font-size: 2.5em;
+	}
+
+	.slogan h2, .email-wrapper h1 {
+		font-size: 1.25em;
+	}
+
+	.email-wrapper {
+		width: 382px;
+	}
+
+	.email, #mc_embed_signup div.mce_inline_error {
+		width: 200px;
+	}
+}
+
+@media (max-width: 510px) {
+	.slogan h1 {
+		font-size: 2.25em;
+	}
+
+	.slogan h2, .email-wrapper h1 {
+		font-size: 1.25em;
+	}
+
+	.email-wrapper {
+		width: 366px;
+	}
+
+	.email, #mc_embed_signup div.mce_inline_error {
+		width: 200px;
+		margin: 0 16px 0 0;
+	}
 }
