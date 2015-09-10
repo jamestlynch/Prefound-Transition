@@ -166,17 +166,17 @@ input:focus {
 }
 
 #mce-success-response {
-	padding: 16px;
 	background: #2C2FFA !important;
-	color: #FFFFFF;
 }
 
 #mc_embed_signup div.mce_inline_error, #mce-error-response, #mce-success-response {
 	width: 300px;
+	padding: 16px;
 
 	position: absolute;
 	top: 109px;
 
+	color: #FFFFFF;
 	font-family: "BrandonGrotesque4", Arial, sans-serif;
 	font-size: 1em !important;
 }
