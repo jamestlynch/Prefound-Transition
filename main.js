@@ -27,10 +27,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		numMinutes = Math.floor(((applicationDeadline - Date.now()) / minutesInMillis) % 60);
 		numSeconds = Math.floor(((applicationDeadline - Date.now()) / secondsInMillis) % 60);
 
-		if (numDays < 10) numDays = "0" + numDays;
-		if (numHours < 10) numHours = "0" + numHours;
-		if (numMinutes < 10) numMinutes = "0" + numMinutes;
-		if (numSeconds < 10) numSeconds = "0" + numSeconds;
+		if (numDays < 0) numDays = "0";
+		else if (numDays < 10) numDays = "0" + numDays;
+		
+		if (numHours < 0) numHours = "0";
+		else if (numHours < 10) numHours = "0" + numHours;
+		
+		if (numMinutes < 0) numMinutes = "0";
+		else if (numMinutes < 10) numMinutes = "0" + numMinutes;
+		
+		if (numSeconds < 0) numSeconds = "0";
+		else if (numSeconds < 10) numSeconds = "0" + numSeconds;
 
 		if (numDays == 1) daysLabel.innerHTML = "Day";
 		else daysLabel.innerHTML = "Days";
