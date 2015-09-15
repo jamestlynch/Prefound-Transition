@@ -9,23 +9,37 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	var minutesLabel = document.getElementById("minutes-label");
 	var secondsLabel = document.getElementById("seconds-label");
 
-	var numDays = 0;
-	var numHours = 0;
-	var numMinutes = 0;
-	var numSeconds = 0;
-
-	var applicationDeadline = new Date(2015, 8, 13, 10, 00, 00);
-
 	var daysInMillis = 24 * 60 * 60 * 1000;
 	var hoursInMillis = 60 * 60 * 1000;
 	var minutesInMillis = 60 * 1000;
 	var secondsInMillis = 1000;
 
-	var updateTimer = function () {
-		numDays = Math.floor((applicationDeadline - Date.now()) / daysInMillis);
-		numHours = Math.floor(((applicationDeadline - Date.now()) / hoursInMillis) % 24);
-		numMinutes = Math.floor(((applicationDeadline - Date.now()) / minutesInMillis) % 60);
-		numSeconds = Math.floor(((applicationDeadline - Date.now()) / secondsInMillis) % 60);
+	var numDays = 0;
+	var numHours = 0;
+	var numMinutes = 0;
+	var numSeconds = 0;
+
+	var curationDropDate = nextCurationDate();
+
+	function nextCurationDate(date) {
+		var curationDropDate = new Date(new Date());
+		var today = new Date();
+
+		if (!(today.getDay() === 0 && today.getHours() > 12)) {
+			curationDropDate.setDate(curationDropDate.getDate() + (7 - curationDropDate.getDay()));
+		}
+		curationDropDate.setHours(12);
+		curationDropDate.setMinutes(0);
+		curationDropDate.setSeconds(0);
+
+		return curationDropDate;
+	}
+
+	function updateTimer() {
+		numDays = Math.floor((curationDropDate - Date.now()) / daysInMillis);
+		numHours = Math.floor(((curationDropDate - Date.now()) / hoursInMillis) % 24);
+		numMinutes = Math.floor(((curationDropDate - Date.now()) / minutesInMillis) % 60);
+		numSeconds = Math.floor(((curationDropDate - Date.now()) / secondsInMillis) % 60);
 
 		if (numDays < 0) numDays = "00";
 		else if (numDays < 10) numDays = "0" + numDays;
