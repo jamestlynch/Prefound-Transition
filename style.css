@@ -5,6 +5,10 @@ html {
 	overflow-x: hidden; // Prevent horizontal scrolling
 }
 
+html, body {
+	height: 100%;
+}
+
 *, *:before, *:after {
 	box-sizing: inherit;
 }
@@ -44,8 +48,12 @@ body {
 
 .wrapper {
 	width: 95%;
+	height: 100%;
 
-	margin: 42px auto;
+	margin: 0 auto;
+	padding: 42px;
+
+	position: relative;
 
 	font-size: 16px;
 	text-align: center;
@@ -121,6 +129,13 @@ body {
 	font-family: "BrandonGrotesque4", Arial, sans-serif;
 	font-size: 1em;
 	text-transform: uppercase;
+}
+
+.email-section {
+	width: 100%;
+	position: absolute;
+	bottom: 50px;
+	left: -20px;
 }
 
 .email-wrapper {
